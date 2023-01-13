@@ -1,0 +1,146 @@
+$color: rgb(137, 74, 232);
+::placeholder {
+    color: $color;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: $color;
+}
+
+::-ms-input-placeholder {
+    color: $color;
+}
+.login {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(137, 74, 232);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-box {
+    width: 70%;
+    height: min-content;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 2.4mm;
+    padding:20px;
+}
+.login-form {
+    width: 35%;
+    height: 100%;
+    line-height: 70px;
+}
+.log-f-txt {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: xx-large;
+    font-weight: bold;
+    &:focus {
+        outline: none;
+        border: none;
+        border-left: 4px solid $color;
+    }
+}
+.log-btn-btom {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.log-f-sub {
+    border: none;
+    min-width: 100px;
+    height: 50px;
+    background-color: $color;
+    cursor: pointer;
+    border-radius: 2.4mm;
+    font-size: x-large;
+    color: white;
+    &:hover{
+        background-color: rgb(149, 95, 230);
+    }
+    &:active{
+        background-color: rgb(121, 48, 230);
+    }
+}
+.login-photo {
+    width: 60%;
+    background-color: rgb(49, 49, 49);
+    border-radius: 2.4mm;
+    object-fit: contain;
+}
+.log-f-text {
+    color: black;
+    font-size: xx-large;
+    font-weight:bold;
+}
+.log-sign {
+    border: none;
+    min-width: 100px;
+    height: 50px;
+    background-color: $color;
+    cursor: pointer;
+    border-radius: 2.4mm;
+    font-size: x-large;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    &:hover{
+        background-color: rgb(149, 95, 230);
+    }
+    &:active{
+        background-color: rgb(121, 48, 230);
+    }
+}
+@media screen and (max-width:1000px){
+    .login-form{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/biometric-authentication-2600572-2179757.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .login-photo{
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    .login-form{
+        line-height: 70px;
+    }
+    .log-f-txt {
+        font-size: x-large;
+    }
+    .log-btn-btom {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .log-f-sub {
+        min-width: 80px;
+        height: 40px;
+        font-size: large;
+    }
+    .log-f-text {
+        font-size: x-large;
+    }
+    .log-sign {
+        border: none;
+        min-width: 100px;
+        font-size: x-large;
+        text-decoration: none;
+        padding: 10px;
+    }
+}
