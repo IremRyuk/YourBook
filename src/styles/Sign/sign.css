@@ -1,1 +1,126 @@
-/*# sourceMappingURL=sign.css.map */
+.signup {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(137, 74, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-form {
+  width: 40%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 50px;
+  background-color: rgb(231, 231, 231);
+  padding: 20px;
+  border-radius: 5mm;
+}
+
+.sign-f-lab {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.sign-f-txt {
+  border: none;
+  border-bottom: 5px solid black;
+  border-radius: 1.4mm;
+  padding-left: 10px;
+  width: 70%;
+  height: 50px;
+  font-size: x-large;
+  font-weight: bold;
+  background-color: rgb(231, 231, 231);
+}
+.sign-f-txt:focus {
+  outline: none;
+  border-bottom: none;
+  border-left: 5px solid rgb(137, 74, 232);
+}
+
+.sign-f-sub {
+  border: 2px solid black;
+  min-width: 100px;
+  height: 50px;
+  background-color: rgb(137, 74, 232);
+  cursor: pointer;
+  border-radius: 2.4mm;
+  font-size: x-large;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sign-f-sub:hover {
+  background-color: rgb(149, 95, 230);
+}
+.sign-f-sub:active {
+  background-color: rgb(121, 48, 230);
+}
+
+.signup-back-btn {
+  border: none;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  min-width: 200px;
+  height: 50px;
+  font-size: xx-large;
+  border-radius: 2.4mm;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 500;
+  background-color: rgb(231, 231, 231);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.2s;
+}
+.signup-back-btn:hover {
+  scale: 1.2;
+}
+
+.fa-arrow-left {
+  font-size: xx-large;
+}
+
+@media screen and (max-width: 1000px) {
+  .sign-f-lab {
+    font-size: x-large;
+  }
+  .sign-form {
+    width: 60%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    line-height: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5mm;
+  }
+  .sign-f-txt {
+    width: 75%;
+    height: 40px;
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sign-f-lab {
+    font-size: x-large;
+  }
+  .sign-form {
+    width: 80%;
+  }
+  .sign-f-txt {
+    width: 90%;
+    height: 40px;
+    font-size: x-large;
+  }
+}/*# sourceMappingURL=sign.css.map */

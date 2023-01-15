@@ -1,14 +1,16 @@
 import {Routes,Route} from 'react-router-dom'
-import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 import LogIn from './pages/LogIn'
 import Home from './pages/Home'
+import { useState } from 'react'
 function App(){
+  let [data,setData] = useState()
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<LogIn />} />
+        <Route path='/' element={<LogIn infoData={data}/>} />
         <Route path='/home' element={<Home />} />
-        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signup' element={<SignUp information={info=>setData(info)}/>} />
       </Routes>
     </div>
   )
