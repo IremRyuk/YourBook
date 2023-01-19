@@ -98,6 +98,10 @@ $color: rgb(137, 74, 232);
     }
 }
 @media screen and (max-width:1000px){
+    .login-box {
+        width: 85%;
+        height: min-content;
+    }
     .login-form{
         width: 100%;
         padding-left: 10px;

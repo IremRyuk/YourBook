@@ -1,15 +1,17 @@
 @import '../defaults/defaults.scss';
 $color: rgb(137, 74, 232);
+// main page setup
 .signup {
     @include beginHead;
 }
+// center form
 .sign-form {
     width: 40%;
     height: min-content;
     line-height: 50px;
     background-color: rgb(231, 231, 231);
     padding: 20px;
-    border-radius:5mm;
+    border-radius: 5mm;
 }
 .sign-f-lab {
     font-size: xx-large;
@@ -24,10 +26,10 @@ $color: rgb(137, 74, 232);
     height: 50px;
     font-size: x-large;
     font-weight: bold;
-    background-color:rgb(231, 231, 231);
-    &:focus{
-        outline:none;
-        border-bottom:none;
+    background-color: rgb(231, 231, 231);
+    &:focus {
+        outline: none;
+        border-bottom: none;
         border-left: 5px solid $color;
     }
 }
@@ -51,7 +53,8 @@ $color: rgb(137, 74, 232);
         background-color: rgb(121, 48, 230);
     }
 }
-.signup-back-btn{
+// login page back btn
+.signup-back-btn {
     border: none;
     position: absolute;
     left: 5%;
@@ -60,23 +63,33 @@ $color: rgb(137, 74, 232);
     height: 50px;
     font-size: xx-large;
     border-radius: 2.4mm;
-    padding-left: 5px;
-    padding-right: 5px;
+    @include pdSides;
     font-weight: 500;
     background-color: rgb(231, 231, 231);
     cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flexCenter;
     transition: 0.2s;
-    &:hover{
+    &:hover {
         scale: 1.2;
     }
+    &:active {
+        background-color: rgb(255, 255, 255);
+    }
 }
-.fa-arrow-left{
+.fa-arrow-left {
     font-size: xx-large;
 }
-@media screen and (max-width:1000px){
+// ghost
+.ghost {
+@include ghosts;
+background-color: red;
+}
+.ghost2{
+    @include ghosts;
+    background-color: green;
+}
+// resize
+@media screen and (max-width:1000px) {
     .sign-f-lab {
         font-size: x-large;
     }
@@ -84,17 +97,16 @@ $color: rgb(137, 74, 232);
         width: 60%;
         height: min-content;
         line-height: 50px;
-        background-color: white;
         padding: 20px;
-        border-radius:5mm;
+        border-radius: 5mm;
     }
     .sign-f-txt {
-        width:75%;
+        width: 75%;
         height: 40px;
         font-size: x-large;
     }
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:500px) {
     .sign-f-lab {
         font-size: x-large;
     }
@@ -102,7 +114,7 @@ $color: rgb(137, 74, 232);
         width: 80%;
     }
     .sign-f-txt {
-        width:90%;
+        width: 90%;
         height: 40px;
         font-size: x-large;
     }

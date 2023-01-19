@@ -27,7 +27,7 @@
   top: 0%;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(137, 74, 232);
+  background: linear-gradient(180deg, #9249FF 0%, #532A92 58.85%, #361C5C 91.15%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,6 +128,12 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .login-box {
+    width: 85%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
   .login-form {
     width: 100%;
     padding-left: 10px;
