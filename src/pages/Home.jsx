@@ -13,7 +13,8 @@ export default function Home() {
         axios
         .get('https://jsonplaceholder.typicode.com/users')
           .then(res=>setDataPeopleList(res.data))      
-          .catch(err=>console.log(err))
+          .catch(err=>err)
+        //   you can console this{catch(err)} to see errors
     },[])
     // profile hide and show & animation control
     let fromSH = () => {
