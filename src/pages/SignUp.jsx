@@ -88,8 +88,8 @@ props.information(x)
                     <input type='submit' className='sign-f-sub'/>
                 </center>
             </form>
-            <div className='ghost' id='ghost' onClick={()=>{$('.ghost').css({right:'-50%'})}}><p>You Must Type: @gmail.com</p></div>
-            <div className='ghost2' id='ghost2' onClick={()=>{$('.ghost2').css({right:'-50%'})}}><p>Account Received</p></div>
+            <div className='ghost' id='ghost' onClick={()=>{$('.ghost').css({right:'-150%'})}}><p>You Must Type: @gmail.com</p></div>
+            <div className='ghost2' id='ghost2' onClick={()=>{$('.ghost2').css({right:'-150%'})}}><p>Account Received</p></div>
         </div>
     )
 }

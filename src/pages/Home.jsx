@@ -108,8 +108,7 @@ export default function Home() {
                         .map(info => {
                             return (<Posts key={info.id} main={info}/>)
                         })
-                }
-                
+                }         
             </div>
         </div>
     )

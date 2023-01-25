@@ -98,7 +98,7 @@
   border: none;
   position: absolute;
   bottom: 5%;
-  right: -50%;
+  right: -150%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -122,7 +122,7 @@
   border: none;
   position: absolute;
   bottom: 5%;
-  right: -50%;
+  right: -150%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
