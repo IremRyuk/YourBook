@@ -8,14 +8,20 @@ export default function Home() {
     let [search, setSearch] = useState('')
     let [postName, setPostName] = useState('')
     let [postCompany, setPostCompany] = useState('')
-    let[data,setDataPeopleList] = useState([])
-    useEffect(()=>{
-        axios
-        .get('https://jsonplaceholder.typicode.com/users')
-          .then(res=>setDataPeopleList(res.data))      
-          .catch(err=>err)
-        //   you can console this{catch(err)} to see errors
-    },[])
+    let [data, setDataPeopleList] = useState([])
+    let [loading,setLoading] = useState(true)
+    // information got from jsonplaceholder
+    let servers = 'https://jsonplaceholder.typicode.com/users'
+    // get information from jsonplaceholder
+    const peopleInfo = async () => {
+        let mainLink = await axios.get(servers)
+        setDataPeopleList(mainLink.data)
+        setLoading(false)
+    }
+    // run serverInfo
+    useEffect(() => {
+        peopleInfo()
+    }, [])
     // profile hide and show & animation control
     let fromSH = () => {
         $('#textPost').css({display: 'block'})
@@ -57,7 +63,7 @@ export default function Home() {
                         <div className='delX' onMouseDown={() => hideForm()}><i className="fa-solid fa-x"/></div>
                         {/* form describe */}
                         <center>
-                        <textarea
+                            <textarea
                                 placeholder='name...'
                                 type='text'
                                 className='txt-pst-name'
@@ -87,14 +93,23 @@ export default function Home() {
                     type='text'
                     onChange={(e) => setSearch(e.target.value)}
                     className='h-texts'
-                    placeholder='Search...'/>
+                    placeholder='Search Name or Job...'/>
             </div>
             <div className='h-c'>
-              {data.map(info=>{
-              return(
-                <Posts key={info.id} main={info}/>
-              )
-              })}
+                {loading? <h1>Loading Please Wait...</h1> :
+                    data
+                        .filter(searches => {
+                            if (search === '') {
+                                return searches
+                            } else if (searches.company.catchPhrase.toLowerCase().includes(search.toLowerCase()) || searches.username.toLowerCase().includes(search.toLowerCase())) {
+                                return search
+                            }
+                        })
+                        .map(info => {
+                            return (<Posts key={info.id} main={info}/>)
+                        })
+                }
+                
             </div>
         </div>
     )
