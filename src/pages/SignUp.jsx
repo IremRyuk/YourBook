@@ -47,7 +47,13 @@ props.information(x)
     let backToLogIn = () => {
         goBack('/')
     }
-
+    // hide ghost on gmail change
+let hideGhost1 = () => {
+    {$('.ghost').css({right:'-150%'})}
+}
+let hideGhost2 = () => {
+    {$('.ghost2').css({right:'-150%'})}
+}
     return (
         <div className='signup'>
             <button className='signup-back-btn' onClick={() => backToLogIn()}><i className="fa-solid fa-arrow-left"/>Log In</button>
@@ -67,6 +73,7 @@ props.information(x)
                         type='text'
                         placeholder='Gmail'
                         onChange={(e) => setGmail(e.target.value)}
+                        onClick={()=>{hideGhost1(),hideGhost2()}}
                         className='sign-f-txt gmails'/>
                     <br/>
                     <label className='sign-f-lab'>Enter Your Password</label>
