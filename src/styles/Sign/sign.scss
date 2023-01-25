@@ -3,6 +3,7 @@ $color: rgb(137, 74, 232);
 // main page setup
 .signup {
     @include beginHead;
+    overflow-x: hidden;
 }
 // center form
 .sign-form {
