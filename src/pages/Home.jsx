@@ -95,7 +95,7 @@ export default function Home() {
                     className='h-texts'
                     placeholder='Search Name or Job...'/>
             </div>
-            <div className='h-c'>
+            <center><div className='h-c'>
                 {loading? <h1>Loading Please Wait...</h1> :
                     data
                         .filter(searches => {
@@ -109,7 +109,7 @@ export default function Home() {
                             return (<Posts key={info.id} main={info}/>)
                         })
                 }         
-            </div>
+            </div></center>
         </div>
     )
 }

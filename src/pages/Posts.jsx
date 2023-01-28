@@ -1,10 +1,12 @@
 import React from 'react'
 import '../styles/Posts/posts.css'
+import { useState } from 'react'
 
 export default function Posts(props) {
-    
+let [orange,setOrange] = useState(true)
   return (
         <div className='main-posts'>
+          <div className='star'><i className={orange?'fa-solid fa-star':'fa-solid fa-star orange'} onClick={()=>setOrange(e=>!e)}/></div>
     <div className='posts' key={props.main.id}>
       <p className='posts-p'>Posted By: <b>{props.main.username}</b></p>
       <div>
