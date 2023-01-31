@@ -34,6 +34,9 @@
 .orange{
     color: orange;
 }
+.big{
+    text-transform: capitalize;
+}
 @media screen and (max-width:1000px) {
     .main-posts{
         width: 80vw;

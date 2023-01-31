@@ -154,7 +154,7 @@ export default function Home() {
                     type='text'
                     onChange={(e) => setSearch(e.target.value)}
                     className='h-texts'
-                    placeholder='Search Name or Job...'/>
+                    placeholder='Search Name or Email...'/>
             </div>
             <center>
                 <div className='h-c'>
@@ -165,7 +165,7 @@ export default function Home() {
                                 .filter(searches => {
                                     if (search === '') {
                                         return searches
-                                    } else if (searches.company.catchPhrase.toLowerCase().includes(search.toLowerCase()) || searches.username.toLowerCase().includes(search.toLowerCase())) {
+                                    } else if (searches.company.catchPhrase.toLowerCase().includes(search.toLowerCase()) || searches.email.toLowerCase().includes(search.toLowerCase())) {
                                         return search
                                     }
                                 })
