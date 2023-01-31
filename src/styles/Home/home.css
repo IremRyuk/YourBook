@@ -99,7 +99,7 @@
 .txt-pst-name {
   width: 90%;
   height: 50px;
-  resize: none;
+  border-radius: 2.4mm;
   font-size: large;
   border: 2px solid rgb(137, 74, 232);
   padding-left: 10px;
@@ -111,7 +111,8 @@
 .txt-pst-phrase {
   width: 90%;
   height: 100px;
-  resize: none;
+  margin-top: 2px;
+  border-radius: 2.4mm;
   font-size: large;
   border: 2px solid rgb(137, 74, 232);
   padding-left: 10px;
@@ -189,6 +190,9 @@
     min-height: 40px;
     font-size: large;
   }
+  .h-c {
+    width: 90vw;
+  }
 }
 @media screen and (max-width: 800px) {
   .h-nav {
@@ -251,5 +255,9 @@
     position: absolute;
     right: -15%;
     top: 0;
+  }
+  .h-c {
+    width: 90vw;
+    padding: 0px;
   }
 }/*# sourceMappingURL=home.css.map */

@@ -11,8 +11,8 @@ let [orange,setOrange] = useState(true)
       <p className='posts-p'>Posted By: <b>{props.main.username}</b></p>
       <div>
         <p>Email: <b>{props.main.email}</b></p>
-        <p>Company Name: <b>{props.main.company.name}</b></p>
-        <p>Company CatchPhrase: <b>{props.main.company.catchPhrase}</b></p>
+        {/* <p>Company Name: <b>{props.main.company.name}</b></p>
+         <p>Company CatchPhrase: <b>{props.main.company.catchPhrase}</b></p> */}
       </div>
     </div>
     </div>
