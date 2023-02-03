@@ -20,6 +20,7 @@ $color: rgb(137, 74, 232);
     @include flexCenter;
     background-color: $color;
 }
+// link to home page
 .hp-header-lk {
     text-decoration: none;
     color: snow;
@@ -34,18 +35,23 @@ $color: rgb(137, 74, 232);
     position: relative;
     background-color: white;
 }
+// form
 .hp-fm {
     position: absolute;
     top: 5%;
     right: 5%;
-    padding: 20px;
+    padding: 10px;
     max-width: 400px;
     height: min-content;
     z-index: 2;
     // border: 2px solid purple;
-    border-radius: 3mm;
     line-height: 70px;
     background-color: aquamarine;
+    transition: 0.4s;
+    &:hover{
+        padding: 20px;
+        border-radius: 5mm;
+    }
 }
 .hp-txt {
     width: 300px;
@@ -68,13 +74,16 @@ $color: rgb(137, 74, 232);
     background-color: rgb(0, 255, 0);
     outline: none;
     cursor: pointer;
+    transition: 0.4s;
     &:hover {
+        border-radius: 2.4mm;
         background-color: rgb(0, 204, 0);
     }
     &:active {
         background-color: rgb(0, 124, 0);
     }
 }
+// image
 .hp-girl {
     position: absolute;
     top: 0;
@@ -83,6 +92,28 @@ $color: rgb(137, 74, 232);
     width: 80%;
     height: 100%;
     object-fit: contain;
+}
+// socials
+.hp-socials{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: min-content;
+    height: min-content;
+    padding: 5px;
+    // border: 2px solid red;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.svgLinks{
+    margin: 10px;
+    transition:0.4s;
+    cursor: pointer;
+    &:hover{
+        scale: 1.7;
+    }
 }
 // ghost
 .ghostForm{

@@ -40,15 +40,19 @@
   position: absolute;
   top: 5%;
   right: 5%;
-  padding: 20px;
+  padding: 10px;
   max-width: 400px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   z-index: 2;
-  border-radius: 3mm;
   line-height: 70px;
   background-color: aquamarine;
+  transition: 0.4s;
+}
+.hp-fm:hover {
+  padding: 20px;
+  border-radius: 5mm;
 }
 
 .hp-txt {
@@ -108,8 +112,10 @@
   background-color: rgb(0, 255, 0);
   outline: none;
   cursor: pointer;
+  transition: 0.4s;
 }
 .hp-sub:hover {
+  border-radius: 2.4mm;
   background-color: rgb(0, 204, 0);
 }
 .hp-sub:active {
@@ -125,6 +131,32 @@
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.hp-socials {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 5px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.svgLinks {
+  margin: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.svgLinks:hover {
+  scale: 1.7;
 }
 
 .ghostForm {
@@ -147,7 +179,7 @@
   cursor: pointer;
   transition: 0.4s;
   border-radius: 2.4mm;
-  z-index: 7;
+  z-index: 11;
   padding: 20px;
 }
 .ghostForm:hover {

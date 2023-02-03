@@ -3,6 +3,9 @@ import '../styles/Help/help.css'
 import { Link } from 'react-router-dom'
 import Girl from '../storage/girlChair.png'
 import { useState } from 'react'
+import FCB from '../storage/fb.png'
+import IN from '../storage/in.png'
+import WP from '../storage/wp.png'
 
 export default function Help() {
     let [userName,setUserName] = useState('')
@@ -34,6 +37,11 @@ export default function Help() {
         </form>
         <img src={Girl} alt='Yourbook Help Center'  className='hp-girl'/>
       </div>
+      <div className='hp-socials'>
+        <a href='https://www.facebook.com' target="_blank"><img src={FCB} className='svgLinks' /></a>
+        <a href='https://www.Instagram.com' target="_blank"><img src={IN}  className='svgLinks'/></a>
+        <a href='https://www.whatsapp.com' target="_blank"><img src={WP}  className='svgLinks'/></a>
+        </div>
       <div className='ghostForm' id='ghost2' onClick={()=>{$('.ghostForm').css({right:'-150%'})}}><p>Problem Sent</p></div>
     </div>
   )
