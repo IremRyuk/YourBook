@@ -1,0 +1,179 @@
+@import '../defaults/defaults.scss';
+$color: rgb(137, 74, 232);
+* {
+    margin: 0;
+    padding: 0;
+}
+.help {
+    width: 100vw;
+    height: 100vh;
+    overflow-y:hidden;
+    // border: 2px solid green;
+}
+.hp-header {
+    width: 100%;
+    height: 50px;
+    // border: 2px solid red;
+    @include flexCenter;
+    background-color: $color;
+}
+.hp-header-lk {
+    text-decoration: none;
+    color: snow;
+    font-weight: bold;
+    font-size: 25px;
+}
+.help-center {
+    width: 100vw;
+    height: 100%;
+    // border: 10px solid aquamarine;
+    display: flex;
+    position: relative;
+    background-color: white;
+}
+.hp-fm {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 20px;
+    max-width: 400px;
+    height: min-content;
+    z-index: 2;
+    // border: 2px solid purple;
+    border-radius: 3mm;
+    line-height: 70px;
+    background-color: aquamarine;
+}
+.hp-txt {
+    width: 300px;
+    height: min-content;
+    @include hpTxts;
+}
+.hp-txt-area {
+    width: 300px;
+    height: 100px;
+    @include hpTxts;
+}
+.hp-sub {
+    width: 80%;
+    height: min-content;
+    padding: 5px;
+    border: 2px solid green;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(0, 255, 0);
+    outline: none;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(0, 204, 0);
+    }
+    &:active {
+        background-color: rgb(0, 124, 0);
+    }
+}
+.hp-girl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+// ghost
+.ghostForm{
+    right: -150%;
+    background-color: green;
+    @include ghosts;
+    padding: 20px;
+}
+// resize
+@media screen and (max-width:1100px) {
+    .hp-fm {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        padding-left: 10px;
+        max-width: 300px;
+        height: min-content;
+        z-index: 2;
+        // border: 2px solid purple;
+        border-radius: 3mm;
+        line-height: 50px;
+        background-color: aquamarine;
+    }
+    .hp-girl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width:900px) {
+    .hp-fm {
+        padding-left: 5px;
+        max-width: 220px;
+    }
+    .hp-txt {
+        width: 200px;
+        height: min-content;
+        @include hpTxtsMini;
+    }
+    .hp-txt-area {
+        width: 200px;
+        height: 100px;
+        @include hpTxtsMini;
+    }
+    .hp-sub {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:700px) {
+    .hp-fm {
+        padding-left: 5px;
+        max-width: 220px;
+        line-height: 25px;
+    }
+    .hp-txt {
+        width: 200px;
+        height: min-content;
+        @include hpTxtsMini;
+    }
+    .hp-txt-area {
+        width: 200px;
+        height: 100px;
+        @include hpTxtsMini;
+    }
+    .hp-girl {
+        top: 20%;
+        height: 70%;
+        object-fit: fill;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .hp-fm {
+        padding-left: 5px;
+        max-width: 500px;
+        line-height: 25px;
+    }
+    .hp-txt {
+        max-width: 400px;
+        height: min-content;
+        @include hpTxts;
+    }
+    .hp-txt-area {
+        max-width: 400px;
+        height: 150px;
+        @include hpTxts;
+    }
+    .hp-girl {
+        top: 20%;
+        height: 70%;
+        object-fit: fill;
+    }
+}

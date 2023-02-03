@@ -1,1 +1,340 @@
-/*# sourceMappingURL=help.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.help {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.hp-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(137, 74, 232);
+}
+
+.hp-header-lk {
+  text-decoration: none;
+  color: snow;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.help-center {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: white;
+}
+
+.hp-fm {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 20px;
+  max-width: 400px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  z-index: 2;
+  border-radius: 3mm;
+  line-height: 70px;
+  background-color: aquamarine;
+}
+
+.hp-txt {
+  width: 300px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding-left: 10px;
+  font-size: x-large;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid black;
+  transition: 0.2s;
+  color: rgb(137, 74, 232);
+  font-weight: bold;
+  background-color: aquamarine;
+}
+.hp-txt:focus {
+  border-left: 4px solid rgb(137, 74, 232);
+  border-bottom: 1px solid black;
+  border-radius: 2.4mm;
+  padding: 5px;
+}
+
+.hp-txt-area {
+  width: 300px;
+  height: 100px;
+  padding-left: 10px;
+  font-size: x-large;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid black;
+  transition: 0.2s;
+  color: rgb(137, 74, 232);
+  font-weight: bold;
+  background-color: aquamarine;
+}
+.hp-txt-area:focus {
+  border-left: 4px solid rgb(137, 74, 232);
+  border-bottom: 1px solid black;
+  border-radius: 2.4mm;
+  padding: 5px;
+}
+
+.hp-sub {
+  width: 80%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 5px;
+  border: 2px solid green;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgb(0, 255, 0);
+  outline: none;
+  cursor: pointer;
+}
+.hp-sub:hover {
+  background-color: rgb(0, 204, 0);
+}
+.hp-sub:active {
+  background-color: rgb(0, 124, 0);
+}
+
+.hp-girl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 80%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ghostForm {
+  right: -150%;
+  background-color: green;
+  border: none;
+  position: absolute;
+  bottom: 5%;
+  right: -150%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 200px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: xx-large;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 2.4mm;
+  z-index: 7;
+  padding: 20px;
+}
+.ghostForm:hover {
+  scale: 1.1;
+}
+
+@media screen and (max-width: 1100px) {
+  .hp-fm {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding-left: 10px;
+    max-width: 300px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    z-index: 2;
+    border-radius: 3mm;
+    line-height: 50px;
+    background-color: aquamarine;
+  }
+  .hp-girl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hp-fm {
+    padding-left: 5px;
+    max-width: 220px;
+  }
+  .hp-txt {
+    width: 200px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-left: 5px;
+    font-size: large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-txt-area {
+    width: 200px;
+    height: 100px;
+    padding-left: 5px;
+    font-size: large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt-area:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-sub {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hp-fm {
+    padding-left: 5px;
+    max-width: 220px;
+    line-height: 25px;
+  }
+  .hp-txt {
+    width: 200px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-left: 5px;
+    font-size: large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-txt-area {
+    width: 200px;
+    height: 100px;
+    padding-left: 5px;
+    font-size: large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt-area:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-girl {
+    top: 20%;
+    height: 70%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hp-fm {
+    padding-left: 5px;
+    max-width: 500px;
+    line-height: 25px;
+  }
+  .hp-txt {
+    max-width: 400px;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-left: 10px;
+    font-size: x-large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-txt-area {
+    max-width: 400px;
+    height: 150px;
+    padding-left: 10px;
+    font-size: x-large;
+    resize: none;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    transition: 0.2s;
+    color: rgb(137, 74, 232);
+    font-weight: bold;
+    background-color: aquamarine;
+  }
+  .hp-txt-area:focus {
+    border-left: 4px solid rgb(137, 74, 232);
+    border-bottom: 1px solid black;
+    border-radius: 2.4mm;
+    padding: 5px;
+  }
+  .hp-girl {
+    top: 20%;
+    height: 70%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}/*# sourceMappingURL=help.css.map */
