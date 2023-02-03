@@ -4,40 +4,11 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Posts from './Posts'
 import {useReducer} from 'react'
-let reducer = (state, action) => {
-    switch (action.type) {
-        case 'username':
-            return {
-                ...state,
-                username: action.value
-            }
-        case 'companyEmail':
-            return {
-                ...state,
-                email: action.value
-            }
-        case 'companyName':
-            return {
-                ...state,
-                companyName: action.value
-            }
-        case 'companyCatchPhrase':
-            return {
-                ...state,
-                companyCatchPhrase: action.value
-            }
-        default:
-            state
-    }
-}
+import {Initial_Values, reducer} from '../components/UseReduce'
+
 export default function Home() {
     let [search, setSearch] = useState('')
-    const [state, dispatch] = useReducer(reducer, {
-        username: '',
-        email: '',
-        companyName: '',
-        companyCatchPhrase: ''
-    })
+    const [state, dispatch] = useReducer(reducer, Initial_Values)
     let [data, setDataPeopleList] = useState([])
     let [loading, setLoading] = useState(true)
     // information got from jsonplaceholder
@@ -65,27 +36,37 @@ export default function Home() {
 
     // add information on page  post request
     let number = 10
-    let formPost = async () => {
+    let formPost = async (e) => {
         number += 1
+        e.preventDefault()
+
         let datae = {
             id: number,
             username: state.username,
+            phone: state.phoneNumber,
             email: state.email,
-            companyname:state.companyName,
-            catchPhrase:state.companyCatchPhrase
+            company: {
+                name: state.companyName,
+                catchPhrase: state.catchPhrase
+            }
         }
         await axios.post(servers, datae)
         setDataPeopleList([
             datae, ...data
         ])
-        // setPostName('')
-        dispatch({type: 'username', value: ''})
-        dispatch({type: 'companyEmail', value: ''})
-        dispatch({type: 'companyName', value: ''})
-        dispatch({type: 'companyCatchPhrase', value: ''})
+        // clear user inputs
+        clear()
+
         hideForm()
     }
-
+    // clears
+    const clear = () => {
+        dispatch({type: 'username', payload: ''})
+        dispatch({type: 'phoneNumber', payload: ''})
+        dispatch({type: 'email', payload: ''})
+        dispatch({type: 'companyName', payload: ''})
+        dispatch({type: 'catchPhrase', payload: ''})
+    }
     return (
         <div className='home'>
             <div className='h-nav'>
@@ -104,7 +85,7 @@ export default function Home() {
                         className='h-p-image'
                         alt='profile-yourbook'/>
                     <br/>
-                    <div className='text-post' id='textPost'>
+                    <form className='text-post' id='textPost' onSubmit={formPost}>
                         {/* remove form */}
                         <div className='delX' onMouseDown={() => hideForm()}><i className="fa-solid fa-x"/></div>
                         {/* form describe */}
@@ -114,28 +95,36 @@ export default function Home() {
                                 type='text'
                                 className='txt-pst-name'
                                 value={state.username}
-                                onChange={(e) => dispatch({type: 'username', value: e.target.value})}/>
+                                required="required"
+                                onChange={(e) => dispatch({type: 'username', payload: e.target.value})}/>
+                            <input
+                                placeholder='phone...'
+                                type='number'
+                                className='txt-pst-number'
+                                required="required"
+                                value={state.phoneNumber}
+                                onChange={(e) => dispatch({type: 'phoneNumber', payload: e.target.value})}/>
                             <input
                                 placeholder='email...'
                                 type='email'
                                 className='txt-pst-phrase'
+                                required="required"
                                 value={state.email}
-                                required="required"
-                                onChange={(e) => dispatch({type: 'companyEmail', value: e.target.value})}/>
-                            {/* <input
-                                placeholder='companyName...'
-                                type='text'
-                                className='txt-pst-phrase'
-                                value={state.companyName}
-                                required="required"
-                                onChange={(e) => dispatch({type: 'companyName', value: e.target.value})}/>
+                                onChange={(e) => dispatch({type: 'email', payload: e.target.value})}/>
                             <input
-                                placeholder='phrase...'
+                                placeholder='describe name...'
                                 type='text'
                                 className='txt-pst-phrase'
-                                value={state.companyCatchPhrase}
                                 required="required"
-                                onChange={(e) => dispatch({type: 'companyCatchPhrase', value: e.target.value})}/> */}
+                                value={state.companyName}
+                                onChange={(e) => dispatch({type: 'companyName', payload: e.target.value})}/>
+                            <input
+                                placeholder='describe company...'
+                                type='text'
+                                className='txt-pst-phrase'
+                                required="required"
+                                value={state.catchPhrase}
+                                onChange={(e) => dispatch({type: 'catchPhrase', payload: e.target.value})}/>
                         </center>
                         <br/>
                         <div className='h-p-btns'>
@@ -143,18 +132,17 @@ export default function Home() {
                                 type='reset'
                                 className='txt-pst-sub'
                                 onClick={() => {
-                                    dispatch({type: 'username', value: ''})
-                                    dispatch({type: 'companyEmail', value: ''})
-                                }}/>
-                            <button className='txt-pst-sub' onClick={() => formPost()}>Post</button>
+                                    clear()
+                                }}/> {/* <button className='txt-pst-sub' onClick={() => formPost()}>Post</button> */}
+                            <input type='submit' className='txt-pst-sub'/>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <input
                     type='text'
                     onChange={(e) => setSearch(e.target.value)}
                     className='h-texts'
-                    placeholder='Search Name or Email...'/>
+                    placeholder='Search Name or ...'/>
             </div>
             <center>
                 <div className='h-c'>
@@ -165,7 +153,7 @@ export default function Home() {
                                 .filter(searches => {
                                     if (search === '') {
                                         return searches
-                                    } else if (searches.company.catchPhrase.toLowerCase().includes(search.toLowerCase()) || searches.email.toLowerCase().includes(search.toLowerCase())) {
+                                    } else if (searches.company.catchPhrase.toLowerCase().includes(search.toLowerCase()) || searches.username.toLowerCase().includes(search.toLowerCase())) {
                                         return search
                                     }
                                 })

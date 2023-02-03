@@ -8,11 +8,12 @@ let [orange,setOrange] = useState(true)
         <div className='main-posts'>
           <div className='star'><i className={orange?'fa-solid fa-star':'fa-solid fa-star orange'} onClick={()=>setOrange(e=>!e)}/></div>
     <div className='posts' key={props.main.id}>
-      <p className='posts-p'>Posted By: <b className='big'>{props.main.username}</b></p>
+      <p className='posts-p'>Nickname: <b className='big'>{props.main.username}</b></p>
+      <p className='posts-p'>Email: <b className='big'>{props.main.email}</b></p>
       <div>
-        <p>Email: <b className='big'>{props.main.email}</b></p>
-        {/* <p>Company Name: <b>{props.main.company.name}</b></p>
-         <p>Company CatchPhrase: <b>{props.main.company.catchPhrase}</b></p> */}
+          <p>Company Name: <b>{props.main.company.name}</b></p> 
+          <p>Contact Us: <b>{props.main.phone}</b></p> 
+        <p>Company Description: <b>{props.main.company.catchPhrase}</b></p>
       </div>
     </div>
     </div>

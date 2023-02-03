@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .home {
   position: absolute;
   top: 0;
@@ -108,9 +114,22 @@
   outline: none;
 }
 
+.txt-pst-number {
+  width: 90%;
+  height: 50px;
+  margin-top: 2px;
+  border-radius: 2.4mm;
+  font-size: large;
+  border: 2px solid rgb(137, 74, 232);
+  padding-left: 10px;
+}
+.txt-pst-number:focus {
+  outline: none;
+}
+
 .txt-pst-phrase {
   width: 90%;
-  height: 100px;
+  height: 70px;
   margin-top: 2px;
   border-radius: 2.4mm;
   font-size: large;
