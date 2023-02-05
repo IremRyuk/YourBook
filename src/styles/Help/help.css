@@ -47,12 +47,12 @@
   height: min-content;
   z-index: 2;
   line-height: 70px;
-  background-color: aquamarine;
+  background-color: #6e00ff;
+  border-radius: 5mm;
   transition: 0.4s;
 }
 .hp-fm:hover {
   padding: 20px;
-  border-radius: 5mm;
 }
 
 .hp-txt {
@@ -65,14 +65,14 @@
   resize: none;
   outline: none;
   border: none;
-  border-bottom: 3px solid black;
   transition: 0.2s;
   color: rgb(137, 74, 232);
   font-weight: bold;
-  background-color: aquamarine;
+  background-color: white;
 }
 .hp-txt:focus {
-  border-left: 4px solid rgb(137, 74, 232);
+  border-left: 4px solid #ff00c8;
+  border-right: 4px solid #ff00c8;
   border-bottom: 1px solid black;
   border-radius: 2.4mm;
   padding: 5px;
@@ -86,14 +86,14 @@
   resize: none;
   outline: none;
   border: none;
-  border-bottom: 3px solid black;
   transition: 0.2s;
   color: rgb(137, 74, 232);
   font-weight: bold;
-  background-color: aquamarine;
+  background-color: white;
 }
 .hp-txt-area:focus {
-  border-left: 4px solid rgb(137, 74, 232);
+  border-left: 4px solid #ff00c8;
+  border-right: 4px solid #ff00c8;
   border-bottom: 1px solid black;
   border-radius: 2.4mm;
   padding: 5px;
@@ -154,6 +154,7 @@
   margin: 10px;
   transition: 0.4s;
   cursor: pointer;
+  background: transparent;
 }
 .svgLinks:hover {
   scale: 1.7;
@@ -186,20 +187,47 @@
   scale: 1.1;
 }
 
+.ghostForm2 {
+  right: -150%;
+  background-color: red;
+  border: none;
+  position: absolute;
+  bottom: 5%;
+  right: -150%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 200px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: xx-large;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 2.4mm;
+  z-index: 11;
+  padding: 20px;
+}
+.ghostForm2:hover {
+  scale: 1.1;
+}
+
 @media screen and (max-width: 1100px) {
   .hp-fm {
     position: absolute;
     top: 5%;
     right: 5%;
     padding-left: 10px;
-    max-width: 300px;
+    max-width: 310px;
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
     z-index: 2;
     border-radius: 3mm;
     line-height: 50px;
-    background-color: aquamarine;
+    background-color: 6ff;
   }
   .hp-girl {
     position: absolute;
@@ -231,10 +259,10 @@
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;
@@ -251,10 +279,10 @@
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt-area:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;
@@ -283,10 +311,10 @@
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;
@@ -303,10 +331,10 @@
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt-area:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;
@@ -334,14 +362,14 @@
     resize: none;
     outline: none;
     border: none;
-    border-bottom: 3px solid black;
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
+    border-right: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;
@@ -354,14 +382,14 @@
     resize: none;
     outline: none;
     border: none;
-    border-bottom: 3px solid black;
     transition: 0.2s;
     color: rgb(137, 74, 232);
     font-weight: bold;
-    background-color: aquamarine;
+    background-color: white;
   }
   .hp-txt-area:focus {
-    border-left: 4px solid rgb(137, 74, 232);
+    border-left: 4px solid #ff00c8;
+    border-right: 4px solid #ff00c8;
     border-bottom: 1px solid black;
     border-radius: 2.4mm;
     padding: 5px;

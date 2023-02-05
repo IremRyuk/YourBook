@@ -25,6 +25,36 @@ export const reducer = (state, action) => {
                     ...state,
                     catchPhrase: action.payload
                 }
+                case 'insta':
+                    return{
+                        ...state,
+                        staticInsta:false
+                    }
+                    case 'instaR':
+                        return{
+                            ...state,
+                            staticInsta:true
+                        }
+                    case 'facebook':
+                        return{
+                            ...state,
+                            staticFb:false
+                        }
+                        case 'facebookR':
+                            return{
+                                ...state,
+                                staticFb:true
+                            }
+                        case 'wp':
+                            return{
+                                ...state,
+                                staticWP:false
+                            }
+                            case 'wpR':
+                                return{
+                                    ...state,
+                                    staticWP:true
+                                }
         default:
             state
     }
@@ -34,5 +64,8 @@ export const Initial_Values = {
     phoneNumber:'',
     email: '',
     companyName: '',
-    catchPhrase:''
+    catchPhrase:'',
+    staticInsta:true,
+    staticFb:true,
+    staticWP:true
 }

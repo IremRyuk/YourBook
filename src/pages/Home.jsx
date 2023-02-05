@@ -56,7 +56,7 @@ export default function Home() {
         ])
         // clear user inputs
         clear()
-
+        // hide form 
         hideForm()
     }
     // clears

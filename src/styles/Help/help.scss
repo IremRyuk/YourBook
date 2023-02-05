@@ -46,11 +46,11 @@ $color: rgb(137, 74, 232);
     z-index: 2;
     // border: 2px solid purple;
     line-height: 70px;
-    background-color: aquamarine;
+    background-color: #6e00ff;
+    border-radius: 5mm;
     transition: 0.4s;
     &:hover{
         padding: 20px;
-        border-radius: 5mm;
     }
 }
 .hp-txt {
@@ -111,6 +111,7 @@ $color: rgb(137, 74, 232);
     margin: 10px;
     transition:0.4s;
     cursor: pointer;
+    background: transparent;
     &:hover{
         scale: 1.7;
     }
@@ -122,6 +123,12 @@ $color: rgb(137, 74, 232);
     @include ghosts;
     padding: 20px;
 }
+.ghostForm2{
+    right: -150%;
+    background-color: red;
+    @include ghosts;
+    padding: 20px;
+}
 // resize
 @media screen and (max-width:1100px) {
     .hp-fm {
@@ -129,13 +136,13 @@ $color: rgb(137, 74, 232);
         top: 5%;
         right: 5%;
         padding-left: 10px;
-        max-width: 300px;
+        max-width: 310px;
         height: min-content;
         z-index: 2;
         // border: 2px solid purple;
         border-radius: 3mm;
         line-height: 50px;
-        background-color: aquamarine;
+        background-color: 6e00ff;
     }
     .hp-girl {
         position: absolute;
