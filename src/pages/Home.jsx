@@ -39,8 +39,8 @@ export default function Home() {
     let formPost = async (e) => {
         number += 1
         e.preventDefault()
-
-        let datae = {
+        // data which will add in page
+        let dataAdd = {
             id: number,
             username: state.username,
             phone: state.phoneNumber,
@@ -50,9 +50,9 @@ export default function Home() {
                 catchPhrase: state.catchPhrase
             }
         }
-        await axios.post(servers, datae)
+        await axios.post(servers, dataAdd)
         setDataPeopleList([
-            datae, ...data
+            dataAdd,...data
         ])
         // clear user inputs
         clear()
@@ -112,7 +112,7 @@ export default function Home() {
                                 value={state.email}
                                 onChange={(e) => dispatch({type: 'email', payload: e.target.value})}/>
                             <input
-                                placeholder='describe name...'
+                                placeholder='company name...'
                                 type='text'
                                 className='txt-pst-phrase'
                                 required="required"
@@ -133,7 +133,7 @@ export default function Home() {
                                 className='txt-pst-sub'
                                 onClick={() => {
                                     clear()
-                                }}/> {/* <button className='txt-pst-sub' onClick={() => formPost()}>Post</button> */}
+                                }}/>
                             <input type='submit' className='txt-pst-sub'/>
                         </div>
                     </form>
