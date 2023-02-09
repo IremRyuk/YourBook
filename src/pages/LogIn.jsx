@@ -29,6 +29,7 @@ export default function LogIn(props) {
           localStorage.setItem('userName',signUpName)
           localStorage.setItem('userGmail',signUpGmail)
           localStorage.setItem('userPass',signUpPass)
+          
         // navigate to home page
             navigate('/home')
         }else{console.log('no')}

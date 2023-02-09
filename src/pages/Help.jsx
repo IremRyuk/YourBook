@@ -36,8 +36,6 @@ export default function Help() {
         }
 
     }
-    // get user name
-    let mainCharecter = localStorage.getItem('userName')
     return (
         <div className='help'>
             <header className='hp-header'>

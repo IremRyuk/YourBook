@@ -5,24 +5,32 @@ import ProfileBg from '../storage/profile/bgT.png'
 import { Initial_Values_Profile, reducer } from '../components/useReducerProfile'
 
 export default function Profile() {
+  // get user name and gmail from local storage
   let mainCharecter = localStorage.getItem('userName')
   let mainGmail = localStorage.getItem('userGmail')
+
   // regEX
   const regex = /@gmail/gm;
-  // user profile initioal values
+
+  // user profile initial values
   const [state, dispatch] = useReducer(reducer,Initial_Values_Profile)
-  
+
+  // user name change in local storage
   let changeName = () =>{
     try {
       let newName = state.nameProfile
       localStorage.setItem('userName',newName)
+      // add name changing animation
      $('.heroName').css({animation:'MainNameAnime 1s infinite'})
-  dispatch({type:'nameProfile',payload:''})  
-setTimeout(()=>{  $('.heroName').css({animation:'none'})},1000)
+     // remove name changing animation and clear name input value
+     dispatch({type:'nameProfile',payload:''})  
+     setTimeout(()=>{  $('.heroName').css({animation:'none'})},1000)
     } catch (error) {
       alert('Something Gone Wrong' + error)
     }
   }
+  
+  // change user gmail in local storage
   let changeGmail = () =>{
     if(regex.test(state.nameGmail)){
       try {
