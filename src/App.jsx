@@ -4,6 +4,7 @@ import LogIn from './pages/LogIn'
 import Home from './pages/Home'
 import { useState } from 'react'
 import Help from './pages/Help'
+import Profile from './pages/Profile'
 function App(){
   let [data,setData] = useState()
   return (
@@ -13,6 +14,7 @@ function App(){
         <Route path='/home' element={<Home />} />
         <Route path='/signup' element={<SignUp information={info=>setData(info)}/>} />
         <Route path="/help" element={<Help />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </div>
   )

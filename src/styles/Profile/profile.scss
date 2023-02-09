@@ -1,0 +1,134 @@
+@import '../defaults/defaults.scss';
+
+$color: rgb(137, 74, 232);
+
+.profile {
+    @include TopAbsolute;
+    overflow-x: hidden;
+}
+// header 
+.profile-header{
+    width: 100%;
+    height:100px;
+    padding-top: 20px;
+    background-color: $color;
+}
+.profile-link{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+    transition: 0.1s;
+    &:hover{
+        font-size:xx-large;
+
+    }
+}
+.profile-name{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+// main user settings
+.profile-settings{
+    border: 0px solid purple;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+.profile-left-side{
+    // border: 2px solid red;
+}
+.profile-show-name{
+    width: fit-content;
+    font-size: large;
+}
+.profile-inp-name{
+    width: 200px;
+    height: min-content;
+    font-size: 25px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    transition: 0.3s;
+    margin: 20px;
+    background-color: rgb(240, 240, 240);
+    &:hover{
+        background-color: rgb(212, 212, 212);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 5px;
+        padding-right: 15px;
+        border: 1px solid black;
+    }
+    &:active{
+        background-color: rgb(180, 180, 180);
+    }
+    &:focus{
+        border-radius: 1mm;
+        outline: 2.7px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-right: 20px;
+        border:none;
+        outline-offset: -7px;
+    }
+}
+.profile-sub{
+    width: fit-content;
+    height: min-content;
+    font-size: 20px;
+    background-color: rgb(162 101 255);
+    border: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    transition: 0.11s;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(193, 152, 255);
+        border-radius: 2.4mm;
+    }
+    &:active{
+        background-color: rgb(91, 26, 189);
+    }
+}
+.line{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -10px;
+    width: 270px;
+    height: 4px;
+    background: black;
+}
+.profile-img{
+    object-fit: cover;
+    width:500px;
+    height: 500px;
+    // border: 2px solid red;
+}
+.heroName{
+    border-radius: 2.4mm;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@keyframes MainNameAnime {
+    0%{
+        border: none;
+    }
+    50%{
+        border: 7px solid white;
+    }
+    100%{
+        border: none;
+    }
+}

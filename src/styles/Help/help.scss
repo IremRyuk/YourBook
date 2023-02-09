@@ -5,11 +5,7 @@ $color: rgb(137, 74, 232);
     padding: 0;
 }
 .help {
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    width: 100vw;
-    height: 100vh;
+@include TopAbsolute;
     overflow:hidden;
     // border: 2px solid green;
 }

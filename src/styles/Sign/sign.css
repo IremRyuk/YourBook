@@ -108,8 +108,7 @@
   height: -moz-min-content;
   height: min-content;
   font-size: xx-large;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 2.4mm;
@@ -133,8 +132,7 @@
   height: -moz-min-content;
   height: min-content;
   font-size: xx-large;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   cursor: pointer;
   transition: 0.4s;
   border-radius: 2.4mm;

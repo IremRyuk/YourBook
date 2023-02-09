@@ -29,8 +29,7 @@
     min-width: 200px;
     height: min-content;
     font-size: xx-large;
-    padding-left: 20px;
-    padding-right: 20px;
+  padding: 20px;
     cursor: pointer;
     transition: 0.4s;
     border-radius: 2.4mm;
@@ -75,4 +74,11 @@
         border-radius: 2.4mm;
         padding: 5px;
     }
+}
+@mixin TopAbsolute {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
 }

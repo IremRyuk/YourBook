@@ -15,7 +15,6 @@ import { Initial_Values, reducer } from '../components/UseReduce'
 export default function Help() {
     let [userName, setUserName] = useState('')
     let [userProb, setUserProb] = useState('')
-    let [statics,setStatic] = useState(true)
     const [state,dispatch] = useReducer(reducer,Initial_Values)
     class UserProblem {
         constructor(name, problem) {
@@ -23,6 +22,7 @@ export default function Help() {
             this.problem = problem
         }
     }
+    // test inputs values
     let x = new UserProblem(userName, userProb)
     let Help = (e) => {
         e.preventDefault()
@@ -36,6 +36,8 @@ export default function Help() {
         }
 
     }
+    // get user name
+    let mainCharecter = localStorage.getItem('userName')
     return (
         <div className='help'>
             <header className='hp-header'>
