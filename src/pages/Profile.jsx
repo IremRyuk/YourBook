@@ -3,7 +3,6 @@ import '../styles/Profile/profile.css'
 import { Link } from 'react-router-dom'
 import ProfileBg from '../storage/profile/bgT.png'
 import { Initial_Values_Profile, reducer } from '../components/useReducerProfile'
-import $ from 'jquery'
 
 export default function Profile() {
   let mainCharecter = localStorage.getItem('userName')
