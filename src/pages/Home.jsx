@@ -5,12 +5,20 @@ import axios from 'axios'
 import Posts from './Posts'
 import {useReducer} from 'react'
 import {Initial_Values, reducer} from '../components/UseReduce'
+import Star from '../components/Star'
 
 export default function Home() {
-    let [search, setSearch] = useState('')
+    let [search, setSearch] = useState('')  
     const [state, dispatch] = useReducer(reducer, Initial_Values)
     let [data, setDataPeopleList] = useState([])
     let [loading, setLoading] = useState(true)
+    // favourites add
+    let [dataForFavourites,setDataForFavourites] = useState([])
+    let addFV = (items) =>{
+// console.log(items)
+dataForFavourites.push(items)
+console.log(dataForFavourites)
+    }
     // information got from jsonplaceholder
     let servers = 'https://jsonplaceholder.typicode.com/users'
     // get information from jsonplaceholder
@@ -54,12 +62,12 @@ export default function Home() {
         setDataPeopleList([
             dataAdd,...data
         ])
-        // clear user inputs
+        // clears user inputs
         clear()
         // hide form 
         hideForm()
     }
-    // clears
+    // clearer
     const clear = () => {
         dispatch({type: 'username', payload: ''})
         dispatch({type: 'phoneNumber', payload: ''})
@@ -158,11 +166,12 @@ export default function Home() {
                                     }
                                 })
                                 .map(info => {
-                                    return (<Posts key={info.id} main={info}/>)
+                                    return (<Posts key={info.id} main={info} addFV={addFV}/>)
                                 })
                     }
                 </div>
             </center>
+            <Star fvItems={dataForFavourites}/>
         </div>
     )
 }

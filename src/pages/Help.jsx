@@ -22,6 +22,7 @@ export default function Help() {
             this.problem = problem
         }
     }
+    
     // test inputs values
     let x = new UserProblem(userName, userProb)
     let Help = (e) => {

@@ -22,14 +22,6 @@ export default function LogIn(props) {
           console.log('sign Up first' + error)
         }
         peopleList.filter(res=>{if(res === gmail || res === pass){
-          // name of user
-          let signUpName = props.infoData.name
-          let signUpGmail = props.infoData.gmail
-          let signUpPass = props.infoData.pass
-          localStorage.setItem('userName',signUpName)
-          localStorage.setItem('userGmail',signUpGmail)
-          localStorage.setItem('userPass',signUpPass)
-          
         // navigate to home page
             navigate('/home')
         }else{console.log('no')}

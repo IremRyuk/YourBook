@@ -5,6 +5,24 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 $color: rgb(137, 74, 232);
+// scroll properties
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #b7b7b7b5;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: rgba(146, 102, 212, 0.699);
+    border-radius: 0mm;
+    border-top-left-radius: 0mm;
+    border-bottom-left-radius: 0mm;
+    &:hover{
+        background-color: rgb(102, 0, 255);
+        border-top-left-radius: 2mm;
+        border-bottom-left-radius: 2mm;
+    }
+  }
 .home {
     position: absolute;
     top: 0;

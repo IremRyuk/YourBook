@@ -19,7 +19,7 @@ export default function SignUp(props) {
         }
     }
 
-    let x = new Person(name, gmail, pass)
+    let newPerson = new Person(name, gmail, pass)
 
     let signUp = (e) => {
         e.preventDefault()
@@ -36,10 +36,16 @@ if (regx.test(gmail)) {
 $('#ghost').css({right:'5%'})
   $('.gmails').css({borderLeft: '10px solid red'})
 }
-
-// send information
-console.log(x)
-props.information(x)
+          // name of user
+          let userName = newPerson.name
+          let userGmail = newPerson.gmail
+          let userPassword = newPerson.pass
+          localStorage.setItem('userName',userName)
+          localStorage.setItem('userGmail',userGmail)
+          localStorage.setItem('userPass',userPassword)
+          // send information
+          console.log(newPerson)
+props.information(newPerson)
         }
     }
 

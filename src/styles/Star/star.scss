@@ -1,0 +1,17 @@
+.star-page{
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    display: block;
+    width: 0px;
+    height: 200px;
+    overflow-x: hidden;
+    border: 7px solid rgb(255, 0, 242);
+    border-radius: 2.4mm;
+    background-color: gray;
+    transition: 0.4s;
+}
+.star-page:hover{
+    width: 300px;
+}
