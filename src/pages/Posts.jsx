@@ -6,7 +6,7 @@ export default function Posts({main,addFV}) {
 let [orange,setOrange] = useState(true)
   return (
         <div className='main-posts'>
-          <div className='star'><i className={orange?'fa-solid fa-star':'fa-solid fa-star orange'} onMouseDown={()=>setOrange(e=>!e)} onClick={()=>addFV(main)}/></div>
+          <div className='star' onMouseDown={()=>addFV(main)}><i className={orange?'fa-solid fa-star':'fa-solid fa-star orange'} onMouseDown={()=>setOrange(e=>!e)}/></div>
     <div className='posts' key={main.id}>
       <p className='posts-p'>Nickname: <b className='big'>{main.username}</b></p>
       <p className='posts-p'>Email: <b className='big'>{main.email}</b></p>

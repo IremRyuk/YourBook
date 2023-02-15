@@ -9,10 +9,21 @@
   overflow-x: hidden;
   border: 7px solid rgb(255, 0, 242);
   border-radius: 2.4mm;
-  background-color: gray;
+  background-color: rgb(168, 168, 168);
   transition: 0.4s;
 }
 
 .star-page:hover {
   width: 300px;
+}
+
+.star-clear {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  font-size: large;
+  background-color: red;
+  padding: 5px;
+  border-radius: 1.4mm;
+  cursor: pointer;
 }/*# sourceMappingURL=star.css.map */

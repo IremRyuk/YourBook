@@ -12,13 +12,30 @@ export default function Home() {
     const [state, dispatch] = useReducer(reducer, Initial_Values)
     let [data, setDataPeopleList] = useState([])
     let [loading, setLoading] = useState(true)
+
     // favourites add
     let [dataForFavourites,setDataForFavourites] = useState([])
-    let addFV = (items) =>{
-// console.log(items)
-dataForFavourites.push(items)
-console.log(dataForFavourites)
+    let [info,setInfo] = useState([])
+    // console.log(fromChild)
+
+    // favourites code
+   let addFV = (items) => {
+    dataForFavourites.filter(infos=>{info.push(infos.id)})
+    if(!info.includes(items.id)){
+        dataForFavourites.push(items)
+    }else if(info.includes(items.id)){
+        // alert('Job Already Saved')
+        let x = info.indexOf(items.id)
+        console.log(x)
+        info.splice(x)
+        dataForFavourites.splice(x,1)
+        
     }
+    console.log(info)
+    console.log(dataForFavourites)
+}
+
+
     // information got from jsonplaceholder
     let servers = 'https://jsonplaceholder.typicode.com/users'
     // get information from jsonplaceholder
@@ -30,7 +47,8 @@ console.log(dataForFavourites)
     // run serverInfo
     useEffect(() => {
         peopleInfo()
-    }, [])
+        setDataForFavourites
+    })
     // profile hide and show & animation control
     let fromSH = () => {
         $('#textPost').css({display: 'block'})
