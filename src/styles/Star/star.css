@@ -6,8 +6,9 @@
   display: block;
   width: 0px;
   height: 300px;
+  padding: 5px 0px;
   overflow-x: hidden;
-  border: 7px solid rgb(255, 0, 242);
+  border: 7px solid rgba(146, 102, 212, 0.7);
   border-top-right-radius: 2.4mm;
   border-bottom-right-radius: 2.4mm;
   background-color: rgb(168, 168, 168);
@@ -19,13 +20,15 @@
   border-left: none;
 }
 
-.star-clear {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  font-size: large;
-  background-color: red;
+.star-box {
+  width: 90%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   padding: 5px;
-  border-radius: 0mm;
-  cursor: pointer;
+  border: 2px solid rgb(137, 74, 232);
+  border-radius: 2.4mm;
+  text-align: left;
+  background-color: rgba(146, 102, 212, 0.7);
+  margin: 5px 0px;
 }/*# sourceMappingURL=star.css.map */

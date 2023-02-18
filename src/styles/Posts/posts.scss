@@ -31,12 +31,32 @@
     color: white;
     padding: 10px;
     cursor: pointer;
-}
-.orange{
-    color: orange;
+    transition: 0.7s;
+    &:hover{
+
+        animation: starAnime 0.7s infinite;
+    }
 }
 .big{
     text-transform: capitalize;
+}
+@keyframes starAnime {
+    0%{
+        scale: 1;
+        color: white;
+    }
+    30%{
+        scale: 1.4;
+        color: orange;
+    }
+    70%{
+        scale: 1.4;
+        color: orange;
+    }
+    100%{
+        scale: 1;
+        color: white;
+    }
 }
 @media screen and (max-width:1000px) {
     .main-posts{

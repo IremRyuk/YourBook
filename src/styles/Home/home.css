@@ -196,6 +196,36 @@ input::-webkit-inner-spin-button {
   padding: 10px;
 }
 
+.ghostHome {
+  position: fixed;
+  right: -100%;
+  bottom: 5%;
+  font-size: xx-large;
+  padding: 15px 15px;
+  text-align: center;
+  background-color: rgb(137, 74, 232);
+  border-radius: 2.4mm;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.fa-xmark {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  color: red;
+  font-size: xx-large;
+}
+
+.clear {
+  font-size: x-large;
+  background-color: red;
+  border: 5px solid red;
+  border-radius: 2.4mm;
+  padding: 5px;
+  cursor: pointer;
+}
+
 @-webkit-keyframes profileAnim {
   0% {
     border: 3px solid rgb(137, 74, 232);

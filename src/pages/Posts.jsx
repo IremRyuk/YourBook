@@ -1,12 +1,10 @@
 import React from 'react'
 import '../styles/Posts/posts.css'
-import { useState } from 'react'
 
 export default function Posts({main,addFV}) {
-let [orange,setOrange] = useState(true)
   return (
         <div className='main-posts'>
-          <div className='star' onMouseDown={()=>addFV(main)}><i className={orange?'fa-solid fa-star':'fa-solid fa-star orange'} onMouseDown={()=>setOrange(e=>!e)}/></div>
+          <div className='star' onMouseDown={()=>addFV(main)}><i className='fa-solid fa-star'/></div>
     <div className='posts' key={main.id}>
       <p className='posts-p'>Nickname: <b className='big'>{main.username}</b></p>
       <p className='posts-p'>Email: <b className='big'>{main.email}</b></p>

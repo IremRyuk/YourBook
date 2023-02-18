@@ -1,3 +1,5 @@
+$color: rgb(137, 74, 232);
+
 .star-page{
     position: fixed;
     top: 50%;
@@ -6,8 +8,9 @@
     display: block;
     width: 0px;
     height: 300px;
+    padding: 5px 0px;
     overflow-x: hidden;
-    border: 7px solid rgb(255, 0, 242);
+    border: 7px solid rgb(146 102 212 / 70%);
     border-top-right-radius: 2.4mm;
     border-bottom-right-radius: 2.4mm;
     background-color: rgb(168, 168, 168);
@@ -17,14 +20,13 @@
     width: 300px;
     border-left: none;
 }
-// stars clear btn 
-.star-clear{
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    font-size: large;
-    background-color: red;
+.star-box{
+    width: 90%;
+    height: min-content;
     padding: 5px;
-    border-radius: 0mm;
-    cursor: pointer;
+    border: 2px solid $color;
+    border-radius: 2.4mm;
+    text-align: left;
+    background-color:rgb(146 102 212 / 70%) ;
+    margin: 5px 0px;
 }

@@ -6,6 +6,7 @@ import Posts from './Posts'
 import {useReducer} from 'react'
 import {Initial_Values, reducer} from '../components/UseReduce'
 import Star from '../components/Star'
+import $ from 'jquery'
 
 export default function Home() {
     let [search, setSearch] = useState('')  
@@ -16,7 +17,6 @@ export default function Home() {
     // favourites add
     let [dataForFavourites,setDataForFavourites] = useState([])
     let [info,setInfo] = useState([])
-    // console.log(fromChild)
 
     // favourites code
    let addFV = (items) => {
@@ -24,15 +24,13 @@ export default function Home() {
     if(!info.includes(items.id)){
         dataForFavourites.push(items)
     }else if(info.includes(items.id)){
-        // alert('Job Already Saved')
-        let x = info.indexOf(items.id)
-        console.log(x)
-        info.splice(x)
-        dataForFavourites.splice(x,1)
-        
+        $('.ghostHome').css({right:'5%'})
+        return
     }
-    console.log(info)
-    console.log(dataForFavourites)
+}
+let clears = () =>{
+    setDataForFavourites([])
+setInfo([])
 }
 
 
@@ -189,6 +187,12 @@ export default function Home() {
                     }
                 </div>
             </center>
+            <div className='ghostHome'>
+            <i className="fa-solid fa-xmark" onClick={()=>{$('.ghostHome').css({right:'-100%'})}}></i>
+                Item Already In Mini-Box
+                <br />
+                <button className='clear' onClick={()=>clears()}>Clear Mini-Box ?</button>
+            </div>
             <Star fvItems={dataForFavourites}/>
         </div>
     )
