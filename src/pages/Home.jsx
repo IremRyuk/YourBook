@@ -6,7 +6,6 @@ import Posts from './Posts'
 import {useReducer} from 'react'
 import {Initial_Values, reducer} from '../components/UseReduce'
 import Star from '../components/Star'
-import $ from 'jquery'
 
 export default function Home() {
     let [search, setSearch] = useState('')  
