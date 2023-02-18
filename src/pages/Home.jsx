@@ -21,7 +21,7 @@ export default function Home() {
    let addFV = (items) => {
     dataForFavourites.filter(infos=>{info.push(infos.id)})
     if(!info.includes(items.id)){
-        dataForFavourites.push(items)
+        setDataForFavourites([...dataForFavourites,items])
     }else if(info.includes(items.id)){
         $('.ghostHome').css({right:'5%'})
         return
@@ -44,8 +44,7 @@ setInfo([])
     // run serverInfo
     useEffect(() => {
         peopleInfo()
-        setDataForFavourites
-    })
+    },[])
     // profile hide and show & animation control
     let fromSH = () => {
         $('#textPost').css({display: 'block'})
